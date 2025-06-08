@@ -172,3 +172,42 @@ type ReviewLog = {
     review: Date; // Date of the review
 }
 ```
+
+## AnkiClone Expo Mobile App
+
+This project now includes an Expo-based mobile application that serves as a simplified clone of Anki, leveraging the `ts-fsrs` library for spaced repetition scheduling.
+
+### Core Features:
+- **Deck Management**: Create, view, and delete decks of flashcards.
+- **Card Management**: Add, view, edit, and delete cards within decks. Each card has a front (question) and a back (answer).
+- **FSRS-Powered Reviews**: The review schedule for cards is determined by the FSRS algorithm. When reviewing, users grade their recall (Again, Hard, Good, Easy), and the card's next review date is updated accordingly.
+- **Local Storage**: All deck and card data, including FSRS scheduling parameters, is stored locally on the device using SQLite.
+
+### Running the App (General Expo Instructions)
+
+To run the Expo app (named `AnkiClone` within the project structure):
+
+1.  **Ensure Expo CLI is installed**:
+    ```bash
+    npm install -g expo-cli
+    ```
+2.  **Navigate to the app directory**:
+    If you have the `AnkiClone` app directory (which was created during development):
+    ```bash
+    cd AnkiClone
+    # Or the relevant path to where the Expo app is located
+    ```
+3.  **Install dependencies**:
+    If not already done, or to ensure they are up to date:
+    ```bash
+    npm install
+    # or
+    # yarn install
+    ```
+4.  **Start the development server**:
+    ```bash
+    npx expo start
+    ```
+    This will provide options to open the app on a connected device (via Expo Go app) or in an emulator/simulator.
+
+**Note**: The Expo app was developed as part of a feature addition and resides within the project structure created during its development (typically an `AnkiClone` subdirectory). The exact path might depend on how the project is checked out or structured.
